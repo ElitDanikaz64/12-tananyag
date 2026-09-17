@@ -1,16 +1,13 @@
-﻿namespace _12i_repo.Templates
+﻿namespace _12i_repo.Templates // 1.) Relocate 
 {
-
-    // !! RENAME CLASS | Ctrl + R (2x) !! //
-
-
+    // 2.) Rename manually class
     public class FeladatTemplate : Shared.OraiFeladat
     {
         // -- Feladat torso --
 
 
 
-        // -- interface stuff --
+        // -- Main-be kerülő logika --
 
         public override void OnProgramStart()
         {
