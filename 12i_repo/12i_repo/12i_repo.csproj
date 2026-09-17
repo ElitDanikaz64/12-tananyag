@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Anissza\" />
+    <Folder Include="BorosB\" />
   </ItemGroup>
 
 </Project>
