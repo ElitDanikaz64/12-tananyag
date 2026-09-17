@@ -2,9 +2,12 @@
 {
     internal class Program
     {
+
+        public static event Action FeladatMeghivas = new ;
+
         static void Main(string[] args)
         {
-            
+            FeladatMeghivas?.Invoke();
         }
     }
 }
