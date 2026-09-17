@@ -24,14 +24,26 @@
             }
         }
 
+        public static int BookCount = 0;
+        public bool IsAvalible { get; set; }
 
         public Book(string title, string author, int pageCount)
         {
             Title = title;
             Author = author;
             PageCount = pageCount;
+
+            BookCount++;
         }
 
+        public Book(string title, string author)
+        {
+            Title = title;
+            Author = author;
+            PageCount = 0;
+
+            BookCount++;
+        }
 
         public void Description()
         {
@@ -43,7 +55,31 @@
             return PageCount > 300;
         }
 
-        // -- interface stuff --
+        public void Borrow()
+        {
+            if (IsAvalible)
+            {
+                Console.WriteLine($"Már kivetted a(z) {this.Title} című könyvet!");
+                return;
+            }
+
+            IsAvalible = false;
+        }
+
+        public void Return()
+        {
+            if (IsAvalible)
+            {
+                Console.WriteLine($"Már visszavitted a(z) {this.Title} című könyvet!");
+                return;
+            }
+
+            IsAvalible = true;
+        }
+
+
+
+        // -- Main-be kerülő logika --
 
         public override void OnProgramStart()
         {
@@ -56,7 +92,9 @@
             Console.WriteLine(book1.IsLong());
             Console.WriteLine(book2.IsLong());
 
+            Book book3 = new Book("c", "John Doe v2");
 
+            Console.WriteLine($"{Book.BookCount} db könyv lett létrehozva idáig.");
         }
     }
 }

@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="_Templates\FeladatTemplate.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Anissza\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="_Templates\FeladatTemplate.cs" />
   </ItemGroup>
 
 </Project>
