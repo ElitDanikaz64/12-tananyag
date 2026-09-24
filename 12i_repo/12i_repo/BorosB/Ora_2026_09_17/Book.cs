@@ -77,7 +77,36 @@
             IsAvalible = true;
         }
 
+        public string ShortTitle(int maxLength)
+        {
+            if (Title.Length <= maxLength) return Title;
 
+            string shortTitle = "";
+
+            for (int i = 0; i < Title.Length; i++)
+            {
+                char c = Title[i];
+
+                if (i + 1 > maxLength)
+                    c = '.';
+
+                shortTitle += c;
+            }
+
+            return shortTitle;
+        }
+
+        public bool SameAuthor(Book other)
+        {
+            return this == other;
+        }
+
+        public int ReadingDays(int pagesPerDay)
+        {
+            return PageCount * pagesPerDay;
+        }
+
+        
 
         // -- Main-be kerülő logika --
 

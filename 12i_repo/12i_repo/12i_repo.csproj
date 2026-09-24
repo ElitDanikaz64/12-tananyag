@@ -15,7 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="FeladatTemplate.cs" />
+    <Compile Remove="_Templates\FeladatTemplate.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="_Templates\FeladatTemplate.cs" />
   </ItemGroup>
 
 </Project>
