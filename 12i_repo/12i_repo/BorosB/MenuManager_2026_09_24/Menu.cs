@@ -14,13 +14,11 @@
 
         private List<MenuItem> _items;
 
-
         public Menu(string etlapName)
         {
             Name = etlapName;
             _items = new List<MenuItem>();
         }
-
 
         public MenuItem FindByName(string targetName)
         {
