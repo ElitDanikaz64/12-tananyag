@@ -1,6 +1,6 @@
-﻿namespace _12i_repo.BorosB.OsztalyMetodusGyakorlas.Ora_2026_09_17
+﻿namespace _12i_repo.BorosB.Ora_2026_09_17
 {
-    public class Book : Shared.OraiFeladat
+    public class Book : Shared.ProgramStartManager
     {
         // -- Feladat torso --
         
@@ -59,7 +59,7 @@
         {
             if (IsAvalible)
             {
-                Console.WriteLine($"Már kivetted a(z) {this.Title} című könyvet!");
+                Console.WriteLine($"Már kivetted a(z) {Title} című könyvet!");
                 return;
             }
 
@@ -70,7 +70,7 @@
         {
             if (IsAvalible)
             {
-                Console.WriteLine($"Már visszavitted a(z) {this.Title} című könyvet!");
+                Console.WriteLine($"Már visszavitted a(z) {Title} című könyvet!");
                 return;
             }
 
@@ -94,7 +94,7 @@
 
             Book book3 = new Book("c", "John Doe v2");
 
-            Console.WriteLine($"{Book.BookCount} db könyv lett létrehozva idáig.");
+            Console.WriteLine($"{BookCount} db könyv lett létrehozva idáig.");
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿namespace _12i_repo.Templates // 1.) Relocate 
 {
     // 2.) Rename manually class
-    public class FeladatTemplate : Shared.OraiFeladat
+    public class FeladatTemplate : Shared.ProgramStartManager
     {
         // -- Feladat torso --
 

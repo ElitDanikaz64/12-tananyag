@@ -1,10 +1,10 @@
 ﻿namespace _12i_repo.Shared
 {
-    public class OraiFeladat
+    public class ProgramStartManager
     {
         public virtual void OnProgramStart() { }
 
-        public OraiFeladat()
+        public ProgramStartManager()
         {
             Program.FeladatMeghivas += OnProgramStart;
         }

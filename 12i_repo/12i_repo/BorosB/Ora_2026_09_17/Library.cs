@@ -1,6 +1,6 @@
-﻿namespace _12i_repo.BorosB.OsztalyMetodusGyakorlas.Ora_2026_09_17
+﻿namespace _12i_repo.BorosB.Ora_2026_09_17
 {
-    public class Library : Shared.OraiFeladat
+    public class Library : Shared.ProgramStartManager
     {
         // -- Feladat torso --
 
