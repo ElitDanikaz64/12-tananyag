@@ -8,5 +8,8 @@
         {
             Program.FeladatMeghivas += OnProgramStart;
         }
+
+        // ide lehetne írni egy .txt file létrehozót amibe beleillesztem az aznapi dátumot.
+
     }
 }
