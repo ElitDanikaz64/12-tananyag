@@ -1,4 +1,4 @@
-﻿namespace _12i_repo.BorosB.OsztalyMetodusGyakorlas.Ora_2026_09_17
+﻿namespace _12i_repo.Ora_2026_09_17
 {
     public class Library : Shared.OraiFeladat
     {
