@@ -1,14 +1,14 @@
-﻿namespace _12i_repo.GymManager
+﻿namespace _12i_repo.Feladatok.GymManager
 {
     public class Membership : Shared.OraiFeladat
     {
         // -- Feladat torso --
 
-        private string _owner;
+        private Member _owner;
         private int _monthlyPrice;
         private int _months;
 
-        public string Owner
+        public Member Owner
         {
             get { return _owner; }
             set { _owner = value; }
@@ -26,12 +26,12 @@
 
         private bool _isStudent;
 
-        public Membership(string owner, int monthlyPrice, int months, bool isStudent /*ez itt extra*/)
+        public Membership(Member owner, int monthlyPrice, int months)
         {
             _owner = owner;
             _monthlyPrice = monthlyPrice;
             _months = months;
-            _isStudent = isStudent;
+            _isStudent = owner.IsStudent;
         }
 
         public int TotalCost()
@@ -44,11 +44,19 @@
             Months += months;
         }
 
+        public int PricePerVisit()
+        {
+            if(_owner.GetVisits() == 0)
+                return TotalCost();
+            else 
+                return (int)(TotalCost() / _owner.GetVisits());
+        } 
+
         // -- Main-be kerülő logika --
 
         public override void OnProgramStart()
         {
-
+            // member.cs-ben van a Main.cs-es/példányosításos feladatok megoldása
         }
     }
 }

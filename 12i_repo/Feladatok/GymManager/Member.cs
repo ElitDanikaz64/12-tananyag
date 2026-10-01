@@ -1,4 +1,4 @@
-﻿namespace _12i_repo.GymManager // 1.) Relocate 
+﻿namespace _12i_repo.Feladatok.GymManager // 1.) Relocate 
 {
     public class Member : Shared.OraiFeladat
     {
@@ -48,6 +48,11 @@
             return IsStudent ? $"{Name} ({Age} éves diák)" : $"{Name} ({Age} éves normál)";
         }
 
+        public int GetVisits()
+        {
+            return _visits;
+        }
+
         // -- Main-be kerülő logika --
 
         public override void OnProgramStart()
@@ -56,7 +61,6 @@
             Member m2 = new Member("John Doe 2", 5, true);
             Member m3 = new Member("John Doe 3", 300, false);
 
-            m1.CheckIn();
             m2.CheckIn();
             m2.CheckIn();
             m3.CheckIn();
@@ -66,6 +70,17 @@
             Console.WriteLine(m1.Describe());
             Console.WriteLine(m2.Describe());
             Console.WriteLine(m3.Describe());
+
+            Membership ms1 = new Membership(m3, 3, 15);
+            Membership ms2 = new Membership(m1, 6, 3);
+
+            Gym gyimesi = new Gym("Gyimesi");
+
+            gyimesi.AddMembership(ms1);
+            gyimesi.AddMembership(ms2);
+
+            Console.WriteLine(gyimesi.TotalIncome());
+            Console.WriteLine(gyimesi.MostActive().Describe());
 
         }
     }
