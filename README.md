@@ -1,8 +1,9 @@
 # 12-tananyag
 
-# Tanároknak: 
-A repo-t vs C# projektként is használom órán, így a külömböző feladatok megoldásai külömböző mappákban vannak. Nevezésük egyszerű, Ora + aznapi dátum. A tanárnő és a tanárúr óráján készült feladatok külön branch-en találhatóak.
+Legutóbbi feladat folder-je: 12i_repo/Feladatok/GymManager (https://github.com/ElitDanikaz64/12-tananyag/tree/main/12i_repo/Feladatok/GymManager)
 
+# Tanároknak: 
+A repo-t vs C# projektként is használom órán, így a külömböző feladatok megoldásai külömböző mappákban vannak. Nevezésük egyszerű, Ora + aznapi dátum.
 
 
 Minden összes 12-es tananyag amit BB óráján veszünk.
