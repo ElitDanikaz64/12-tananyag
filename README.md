@@ -1,6 +1,6 @@
-# 12-tananyag
-
-Legutóbbi feladat folder-je: 12i_repo/Feladatok/GymManager (https://github.com/ElitDanikaz64/12-tananyag/tree/main/12i_repo/Feladatok/GymManager)
+# Legutóbbi feladat folder-je: 
+-12i_repo/Feladatok/GymManager 
+-https://github.com/ElitDanikaz64/12-tananyag/tree/main/12i_repo/Feladatok/GymManager
 
 # Tanároknak: 
 A repo-t vs C# projektként is használom órán, így a külömböző feladatok megoldásai külömböző mappákban vannak. Nevezésük egyszerű, Ora + aznapi dátum.
