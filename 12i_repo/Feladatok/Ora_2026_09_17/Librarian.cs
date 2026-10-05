@@ -52,7 +52,7 @@
 
         // -- Main-be kerülő logika --
 
-        public override void OnProgramStart()
+        public override void Main()
         {
 
         }

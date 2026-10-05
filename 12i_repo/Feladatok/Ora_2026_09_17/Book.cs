@@ -110,7 +110,7 @@
 
         // -- Main-be kerülő logika --
 
-        public override void OnProgramStart()
+        public override void Main()
         {
             Book book1 = new Book("a", "John Doe v1", 60);
             Book book2 = new Book("b", "John Doe v2", 40);

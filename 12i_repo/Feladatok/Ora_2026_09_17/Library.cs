@@ -54,7 +54,7 @@
 
         // -- Main-be kerülő logika --
 
-        public override void OnProgramStart()
+        public override void Main()
         {
             Library Konyvtar = new Library("Széchenyi Könyvtár");
             Konyvtar.AddBooks(new Book("a", "b"));

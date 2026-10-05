@@ -2,11 +2,11 @@
 {
     public class OraiFeladat
     {
-        public virtual void OnProgramStart() { }
+        public virtual void Main() { }
 
         public OraiFeladat()
         {
-            Program.FeladatMeghivas += OnProgramStart;
+            Program.FeladatMeghivas += Main;
         }
 
         // ide lehetne írni egy .txt file létrehozót amibe beleillesztem az aznapi dátumot.

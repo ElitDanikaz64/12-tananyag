@@ -55,7 +55,7 @@
 
         // -- Main-be kerülő logika --
 
-        public override void OnProgramStart()
+        public override void Main()
         {
             Member m1 = new Member("John Doe 1", 3, true);
             Member m2 = new Member("John Doe 2", 5, true);

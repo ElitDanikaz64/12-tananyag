@@ -54,7 +54,7 @@
 
         // -- Main-be kerülő logika --
 
-        public override void OnProgramStart()
+        public override void Main()
         {
             // member.cs-ben van a Main.cs-es/példányosításos feladatok megoldása
         }
