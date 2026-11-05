@@ -1,6 +1,6 @@
 ﻿namespace _12i_repo.Feladatok.GymManager
 {
-    public class Membership : Shared.OraiFeladat
+    public class Membership : Shared.FeladatMain
     {
         // -- Feladat torso --
 

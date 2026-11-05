@@ -2,7 +2,7 @@
 
 namespace _12i_repo.Feladatok.TeamStats
 {
-    public class Program : Shared.OraiFeladat
+    public class Program : Shared.FeladatMain
     {
         public override void Main()
         {

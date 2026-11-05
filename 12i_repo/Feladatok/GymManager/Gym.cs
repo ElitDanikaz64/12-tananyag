@@ -1,7 +1,7 @@
 ﻿namespace _12i_repo.Feladatok.GymManager // 1.) Relocate 
 {
     // 2.) Rename manually class
-    public class Gym : Shared.OraiFeladat
+    public class Gym : Shared.FeladatMain
     {
         // -- Feladat torso --
 

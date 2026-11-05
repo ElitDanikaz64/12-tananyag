@@ -22,7 +22,7 @@
 
         public Player FindByNumber(int number)
         {
-            if (!_players.Where(x => x.Number == number).Any()) return;
+            if (!_players.Where(x => x.Number == number).Any()) return null;
             return _players.Where(x => x.Number == number).First();
         }
 

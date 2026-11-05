@@ -1,13 +1,42 @@
-﻿namespace _12i_repo
+﻿using _12i_repo.Core;
+
+namespace _12i_repo
 {
     internal class Program
     {
 
-        public static event Action FeladatMeghivas = new ;
+        public static ConsoleView ConsoleView { get; private set; }
+        public static FeladatRegistry FeladatRegistry { get; private set; }
+        public static FeladatExecuter FeladatExecuter { get; private set; }
+
+
+        public static event Action FeladatMeghivas;
 
         static void Main(string[] args)
         {
+            InitializeStuff();
+
             FeladatMeghivas?.Invoke();
+
+            FeladatRegistry.PrintAllExecurtableFeladat();
+
+            Console.WriteLine("------------------");
+
+            while (true)
+            {
+                string rawInput = ConsoleView.GetInput();
+                FeladatExecuter.ExecuteFeladatMain(rawInput);
+                Console.WriteLine(FeladatRegistry.Feladatok.Count);
+                Console.WriteLine(FeladatRegistry.FeladatokById.Count);
+            }
         }
+
+        private static void InitializeStuff()
+        {
+            ConsoleView = new ConsoleView();
+            FeladatRegistry = new FeladatRegistry();
+            FeladatExecuter = new FeladatExecuter();
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace _12i_repo.Ora_2026_09_17
 {
-    public class Librarian : Shared.OraiFeladat
+    public class Librarian : Shared.FeladatMain
     {
         // -- Feladat torso --
 
