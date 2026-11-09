@@ -1,6 +1,6 @@
 ﻿namespace _12i_repo.Ora_2026_09_17
 {
-    public class Book : Shared.FeladatMain
+    public class Book
     {
         // -- Feladat torso --
         
@@ -36,7 +36,7 @@
             BookCount++;
         }
 
-        public Book(string title, string author)
+        public Book(string title, string author) 
         {
             Title = title;
             Author = author;
@@ -104,26 +104,6 @@
         public int ReadingDays(int pagesPerDay)
         {
             return PageCount * pagesPerDay;
-        }
-
-        
-
-        // -- Main-be kerülő logika --
-
-        public override void Main()
-        {
-            Book book1 = new Book("a", "John Doe v1", 60);
-            Book book2 = new Book("b", "John Doe v2", 40);
-
-            book1.Description();
-            book2.Description();
-
-            Console.WriteLine(book1.IsLong());
-            Console.WriteLine(book2.IsLong());
-
-            Book book3 = new Book("c", "John Doe v2");
-
-            Console.WriteLine($"{BookCount} db könyv lett létrehozva idáig.");
         }
     }
 }

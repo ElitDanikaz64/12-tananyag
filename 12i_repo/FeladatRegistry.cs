@@ -1,17 +1,43 @@
 ﻿using System.Linq;
+using System.Reflection;
 
 namespace _12i_repo
 {
     internal class FeladatRegistry
     {
 
-        internal Dictionary<Type, Action> Feladatok { get; private set; }
+        internal Dictionary<Type, Shared.FeladatMain> Feladatok { get; private set; }
         internal Dictionary<string, Action> FeladatokById { get; private set; }
 
         internal FeladatRegistry()
         {
-            Feladatok = new Dictionary<Type, Action>();
+            Feladatok = new Dictionary<Type, Shared.FeladatMain>();
             FeladatokById = new Dictionary<string, Action>();
+
+            InstFeladatClasses();
+
+        }
+
+        internal void InstFeladatClasses()
+        {
+            List<Type> foundTypes = Assembly.GetExecutingAssembly().GetTypes().Where(t => t.IsClass && 
+            !t.IsAbstract && 
+            !t.IsInterface &&
+            t.IsSubclassOf(typeof(Shared.FeladatMain))).ToList();
+
+            List<Shared.FeladatMain> list = new List<Shared.FeladatMain>();
+
+            foreach (Type t in foundTypes)
+            {
+                Shared.FeladatMain instanciatedFeladat = Activator.CreateInstance(t) as Shared.FeladatMain;
+
+                if (instanciatedFeladat == null)
+                    continue;
+
+                Feladatok.Add(t, instanciatedFeladat);
+                AddFeladatMain(instanciatedFeladat.Main);
+            }
+
         }
 
         internal void AddFeladatMain(Action feladatMain)
@@ -44,7 +70,6 @@ namespace _12i_repo
 
             Console.WriteLine($"elérte, feladatMain.Method.DeclaringType={feladatMain.Method.DeclaringType}, feladatMain={feladatMain}");
 
-            Feladatok.Add(feladatMain.Method.DeclaringType, feladatMain);
             FeladatokById.Add(feladatMain.Method.DeclaringType.Namespace!.Split('.')[^1], feladatMain);
 
         }

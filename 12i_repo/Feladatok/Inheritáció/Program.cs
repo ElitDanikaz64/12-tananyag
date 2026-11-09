@@ -1,7 +1,11 @@
 ﻿namespace _12i_repo.Feladatok.Inherit
 {
-    internal class FeladatEntry : Shared.FeladatMain
+    internal class Program : Shared.FeladatMain
     {
+
+        public Program() : base()
+        { }
+
         public override void Main()
         {
             Movie m1 = new Movie("John Doe movie", 2024, 128);
