@@ -21,7 +21,7 @@
 
         internal void Warn(string message)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
 
             Console.WriteLine(message);
 

@@ -15,7 +15,6 @@ namespace _12i_repo
             FeladatokById = new Dictionary<string, Action>();
 
             InstFeladatClasses();
-
         }
 
         internal void InstFeladatClasses()
@@ -35,7 +34,7 @@ namespace _12i_repo
                     continue;
 
                 Feladatok.Add(t, instanciatedFeladat);
-                AddFeladatMain(instanciatedFeladat.Main);
+                /*AddFeladatMain(instanciatedFeladat.Main);*/
             }
 
         }
@@ -45,30 +44,26 @@ namespace _12i_repo
             if (feladatMain == null)
             {
                 Program.ConsoleView.Error("AddFeladatMain() null-t kapott argumentumként.");
-                Console.WriteLine("1");
                 return;
             }
             if (feladatMain.Method.DeclaringType == null)
             {
                 Program.ConsoleView.Error("AddFeladatMain() nem tudta beazonosítani a deklaráló típust (null volt).");
-                Console.WriteLine("2");
                 return;
             }
             if (string.IsNullOrEmpty(feladatMain.Method.DeclaringType.Namespace))
             {
                 Program.ConsoleView.Error("AddFeladatMain() nem tudta beazonosítani a deklaráló típus namespace-jét (null volt).");
-                Console.WriteLine("3");
-                return;
-            }
-
-            if (Feladatok.ContainsKey(feladatMain.Method.DeclaringType))
-            {
-                Program.ConsoleView.Warn("AddFeladatMain() nem sikerült, mert már létezik ez a registry-ben.");
-                Console.WriteLine("4");
                 return;
             }
 
             string name = feladatMain.Method.DeclaringType.Namespace!.Split('.')[^1];
+
+            if (FeladatokById.ContainsKey(name))
+            {
+                Program.ConsoleView.Warn("AddFeladatMain() nem sikerült, mert már létezik ez a registry-ben.");
+                return;
+            }
 
             if (FeladatokById.ContainsKey(name)) return;
 

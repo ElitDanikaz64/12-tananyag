@@ -10,13 +10,13 @@ namespace _12i_repo
         public static FeladatExecuter FeladatExecuter { get; private set; }
 
 
-        public static event Action FeladatMeghivas;
+        public static event Action FeladatRegistring;
 
         static void Main(string[] args)
         {
             InitializeStuff();
 
-            FeladatMeghivas?.Invoke();
+            FeladatRegistring?.Invoke();
 
             FeladatRegistry.PrintAllExecurtableFeladat();
 

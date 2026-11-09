@@ -6,7 +6,7 @@
 
         public FeladatMain()
         {
-            Program.FeladatMeghivas += RegisterFeladat;
+            Program.FeladatRegistring += RegisterFeladat;
         }
 
         private void RegisterFeladat()
