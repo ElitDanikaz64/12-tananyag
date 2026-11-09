@@ -1,7 +1,7 @@
 ﻿namespace _12i_repo.Feladatok.GymManager // 1.) Relocate 
 {
     // 2.) Rename manually class
-    public class Gym : Shared.FeladatMain
+    public class Gym
     {
         // -- Feladat torso --
 
@@ -44,14 +44,6 @@
         public Membership BestValue()
         {
             return _memberships.OrderBy(x => x.PricePerVisit()).Select(x => x).First();
-        }
-
-
-        // -- Main-be kerülő logika --
-
-        public override void Main()
-        {
-            // member.cs-ben van a Main.cs-es/példányosításos feladatok megoldása
         }
     }
 }

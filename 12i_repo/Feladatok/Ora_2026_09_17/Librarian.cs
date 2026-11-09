@@ -1,6 +1,6 @@
 ﻿namespace _12i_repo.Ora_2026_09_17
 {
-    public class Librarian : Shared.FeladatMain
+    public class Librarian
     {
         // -- Feladat torso --
 
@@ -49,12 +49,5 @@
         /*public Book Recommend(int maxPageCount) // kicsi paradoxon, mert a _library osztályának a List<Book> mezőjéből kellene szerintem keresni, de az feladat szerint privát
         {
         }*/
-
-        // -- Main-be kerülő logika --
-
-        public override void Main()
-        {
-
-        }
     }
 }

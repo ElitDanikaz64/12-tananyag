@@ -1,6 +1,6 @@
 ﻿namespace _12i_repo.Feladatok.GymManager
 {
-    public class Membership : Shared.FeladatMain
+    public class Membership
     {
         // -- Feladat torso --
 
@@ -51,12 +51,5 @@
             else 
                 return (int)(TotalCost() / _owner.GetVisits());
         } 
-
-        // -- Main-be kerülő logika --
-
-        public override void Main()
-        {
-            // member.cs-ben van a Main.cs-es/példányosításos feladatok megoldása
-        }
     }
 }

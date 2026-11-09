@@ -68,9 +68,13 @@ namespace _12i_repo
                 return;
             }
 
+            string name = feladatMain.Method.DeclaringType.Namespace!.Split('.')[^1];
+
+            if (FeladatokById.ContainsKey(name)) return;
+
             Console.WriteLine($"elérte, feladatMain.Method.DeclaringType={feladatMain.Method.DeclaringType}, feladatMain={feladatMain}");
 
-            FeladatokById.Add(feladatMain.Method.DeclaringType.Namespace!.Split('.')[^1], feladatMain);
+            FeladatokById.Add(name, feladatMain);
 
         }
 
