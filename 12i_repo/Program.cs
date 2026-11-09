@@ -16,7 +16,7 @@ namespace _12i_repo
         {
             InitializeStuff();
 
-            FeladatRegistring?.Invoke();
+            //FeladatRegistring?.Invoke();
 
             FeladatRegistry.PrintAllExecurtableFeladat();
 

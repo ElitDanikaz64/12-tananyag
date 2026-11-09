@@ -4,6 +4,8 @@
     {
         public virtual void Main() { }
 
+
+
         public FeladatMain()
         {
             Program.FeladatRegistring += RegisterFeladat;
