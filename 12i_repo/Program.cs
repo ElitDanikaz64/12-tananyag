@@ -3,7 +3,7 @@
     internal class Program
     {
 
-        public static event Action FeladatMeghivas = new ;
+        public static event Action FeladatMeghivas;
 
         static void Main(string[] args)
         {
