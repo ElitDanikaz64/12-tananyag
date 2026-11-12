@@ -1,4 +1,4 @@
-﻿namespace _12i_repo.Shared
+﻿namespace _12i_repo.Abstract
 {
     public class FeladatMain
     {
