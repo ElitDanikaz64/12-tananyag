@@ -5,6 +5,7 @@ namespace _12i_repo
     internal class Program
     {
 
+        public static event Action FeladatMeghivas;
         public static ConsoleView ConsoleView { get; private set; }
         public static CommandExecuter CommandExecuter { get; private set; }
         public static FeladatRegistry FeladatRegistry { get; private set; }
