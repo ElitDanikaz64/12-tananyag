@@ -1,4 +1,4 @@
-# Legutóbbi feladat folder-je: 
+# Legutóbbi feladat mappája: 
 - (path) 12i_repo.Feladatok.KozossegiOldal
 - (link) https://github.com/ElitDanikaz64/12-tananyag/tree/main/12i_repo/Feladatok/KozossegiOldal
 
