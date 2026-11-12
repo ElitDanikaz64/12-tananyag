@@ -4,7 +4,9 @@ namespace _12i_repo.Feladatok.Ora_2026_09_17
 {
     internal class Program : Shared.FeladatMain
     {
-        public Program() : base()
+        public Program() : base() { }
+
+        public override void Main()
         {
             Library Konyvtar = new Library("Széchenyi Könyvtár");
             Konyvtar.AddBooks(new Book("a", "b"));
@@ -28,7 +30,6 @@ namespace _12i_repo.Feladatok.Ora_2026_09_17
             Book book3 = new Book("c", "John Doe v2");
 
             Console.WriteLine($"{Book.BookCount} db könyv lett létrehozva idáig.");
-
         }
     }
 }

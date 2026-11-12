@@ -34,7 +34,7 @@ namespace _12i_repo
                     continue;
 
                 Feladatok.Add(t, instanciatedFeladat);
-                /*AddFeladatMain(instanciatedFeladat.Main);*/
+                AddFeladatMain(instanciatedFeladat.Main);
             }
 
         }
@@ -67,7 +67,7 @@ namespace _12i_repo
 
             if (FeladatokById.ContainsKey(name)) return;
 
-            Console.WriteLine($"elérte, feladatMain.Method.DeclaringType={feladatMain.Method.DeclaringType}, feladatMain={feladatMain}");
+            // Program.ConsoleView.Message($"elérte, feladatMain.Method.DeclaringType={feladatMain.Method.DeclaringType}, feladatMain={feladatMain}");
 
             FeladatokById.Add(name, feladatMain);
 

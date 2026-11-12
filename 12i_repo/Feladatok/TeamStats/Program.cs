@@ -4,6 +4,7 @@ namespace _12i_repo.Feladatok.TeamStats
 {
     public class Program : Shared.FeladatMain
     {
+        public Program() : base() { }
         public override void Main()
         {
 

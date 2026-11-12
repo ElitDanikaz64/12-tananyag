@@ -1,17 +1,17 @@
-﻿namespace _12i_repo.Templates // 1.) Relocate 
-{
-    // 2.) Rename manually class
-    public class FeladatTemplate : Shared.OraiFeladat
+﻿namespace _12i_repo.Templates // Relocate 
+
+    public class ProgramTemplate : Shared.OraiFeladat
     {
-        // -- Feladat torso --
+
+        // A konstruktor invokáció ne futtasson kódot kivétel az inheritált konstruktor.
+        public ProgramTemplate() : base() { }
 
 
-
-        // -- Main-be kerülő logika --
-
-        public override void OnProgramStart()
+        // Feladat lefuttatására szolgáló rész
+        public override void Main()
         {
 
         }
+
     }
 }

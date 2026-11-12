@@ -16,6 +16,8 @@
             Program.FeladatRegistry.AddFeladatMain(Main);
         }
 
+        
+
         // ide lehetne írni egy .txt file létrehozót amibe beleillesztem az aznapi dátumot.
 
     }
